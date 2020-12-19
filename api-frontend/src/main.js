@@ -6,7 +6,9 @@ import VueRouter from 'vue-router';
 // import in all my pages
 import Faults from './components/Faults';
 import Page2 from './components/Page2';
-import Home from './components/Home';
+import AddFault from './components/AddFault';
+import EditFault from './components/EditFault';
+import ConfirmDelete from './components/ConfirmDelete'
 
 
 Vue.config.productionTip = false;
@@ -14,13 +16,19 @@ Vue.config.productionTip = false;
 // define routers
 const routes = [
     {
-        path: '/', component : Home
-    },
-    {
         path:'/faults', component: Faults
     },
     {
         path:'/page2', component: Page2
+    },
+    {
+        path:'/faults/add', component : AddFault
+    },
+    {
+        path:'/faults/:id/edit', component : EditFault
+    },
+    {
+        path: '/faults/:id/delete', component : ConfirmDelete
     }
 ]
 
